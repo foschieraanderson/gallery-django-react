@@ -5,7 +5,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = ()
+SECRET_KEY = (
+    "django-insecure-0d(_%zzk-9)hrrvk#@59+&*o6!zxuv76_ve2uyv8n)%l!==)21"
+)
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -24,7 +26,11 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     # LIBS
+    "rest_framework",
+    "corsheaders",
+    "drf_yasg",
     # MY APPS
+    "authentication.apps.AuthenticationConfig",
 ]
 
 MIDDLEWARE = [
@@ -111,3 +117,6 @@ STATIC_URL = "/static/"
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+# Determina qual model o Django deve usar para autenticar usuários
+AUTH_USER_MODEL = "authentication.User"
