@@ -1,3 +1,5 @@
+from django.conf import settings
+from django.conf.urls.static import static
 from django.contrib import admin
 from django.shortcuts import redirect
 from django.urls import include, path
@@ -7,10 +9,10 @@ from rest_framework import permissions
 
 schema_view = get_schema_view(
     openapi.Info(
-        title="API Central de Erros",
+        title="Galeria de imagens",
         default_version="1.0",
-        description="API para centralização de logs de erro",
-        terms_of_service="https://github.com/foschieraanderson/central-de-erros",
+        description="API de uma galeria de imagens",
+        terms_of_service="",
         contact=openapi.Contact(email="foschieraanderson@gmail.com"),
         license=openapi.License(name="MIT License"),
     ),
@@ -21,6 +23,7 @@ schema_view = get_schema_view(
 urlpatterns = [
     # App Admin
     path("admin/", admin.site.urls),
+    path("api/", include("upload.urls")),
     # Endpoints de autenticação de usuários
     path("api/auth/", include("authentication.urls")),
     path("", lambda request: redirect("api/swagger/", permanent=False)),
@@ -35,4 +38,4 @@ urlpatterns = [
         schema_view.with_ui("redoc", cache_timeout=0),
         name="schema-redoc",
     ),
-]
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

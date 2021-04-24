@@ -1,3 +1,5 @@
+import datetime
+import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -5,9 +7,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = (
-    "django-insecure-0d(_%zzk-9)hrrvk#@59+&*o6!zxuv76_ve2uyv8n)%l!==)21"
-)
+SECRET_KEY = ()
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -31,6 +31,7 @@ INSTALLED_APPS = [
     "drf_yasg",
     # MY APPS
     "authentication.apps.AuthenticationConfig",
+    "upload.apps.UploadConfig",
 ]
 
 MIDDLEWARE = [
@@ -42,6 +43,26 @@ MIDDLEWARE = [
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
+
+CORS_ORIGIN_ALLOW_ALL = True
+
+REST_FRAMEWORK = {
+    "DEFAULT_PERMISSION_CLASSES": (
+        "rest_framework.permissions.IsAuthenticated",
+    ),
+    "DEFAULT_AUTHENTICATION_CLASSES": (
+        "rest_framework_jwt.authentication.JSONWebTokenAuthentication",
+        "rest_framework.authentication.SessionAuthentication",
+        "rest_framework.authentication.BasicAuthentication",
+    ),
+}
+
+JWT_AUTH = {
+    "JWT_RESPONSE_PAYLOAD_HANDLER": "authentication.utils.jwt_response_payload_handler",
+    "JWT_EXPIRATION_DELTA": datetime.timedelta(days=2),
+    "JWT_ALLOW_REFRESH": True,
+    "JWT_REFRESH_EXPIRATION_DELTA": datetime.timedelta(days=7),
+}
 
 ROOT_URLCONF = "api.urls"
 
@@ -112,6 +133,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = "/static/"
+MEDIA_URL = "/media/"
+MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
