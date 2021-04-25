@@ -3,6 +3,9 @@ import styled from "styled-components";
 export const Container = styled.header`
   background: var(--blue);
   box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+
+  position: relative;
+  z-index: 1;
 `;
 
 export const Content = styled.div`

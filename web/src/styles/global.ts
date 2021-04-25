@@ -1,5 +1,7 @@
 import { createGlobalStyle } from 'styled-components';
 
+import "react-circular-progressbar/dist/styles.css";
+
 export const GlobalStyle = createGlobalStyle`
   :root {
     --red: #E52E4D;
@@ -18,6 +20,7 @@ export const GlobalStyle = createGlobalStyle`
   * {
     margin: 0;
     padding: 0;
+    outline: 0;
     box-sizing: border-box;
   }
 
@@ -33,6 +36,7 @@ export const GlobalStyle = createGlobalStyle`
 
   body {
     background: var(--background);
+    text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
   }
 
@@ -47,6 +51,10 @@ export const GlobalStyle = createGlobalStyle`
 
   button {
     cursor: pointer;
+  }
+
+  html, body, #root {
+    height: 100%;
   }
 
 `
