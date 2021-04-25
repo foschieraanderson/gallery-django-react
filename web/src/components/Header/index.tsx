@@ -9,7 +9,7 @@ export function Header() {
             <Content>
                 <Link to="/"><FiImage /> Galeria</Link>
                 <Link to="/upload"><FiUpload /> Upload</Link>
-                <Link to="/upload"><FiLogIn /> Entrar</Link>
+                <Link to="/login"><FiLogIn /> Entrar</Link>
                 {/* <Link to="/upload"><FiLogOut /> Sair</Link> */}
             </Content>
         </Container>
