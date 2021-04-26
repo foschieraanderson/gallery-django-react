@@ -37,8 +37,8 @@ export function Gallery() {
     useEffect(() => {
         setGallery(
             images.map(image => ({
-                original: `http://127.0.0.1:8000${image.image}`,
-                thumbnail: `http://127.0.0.1:8000${image.image}`
+                original:   `${process.env.REACT_APP_API_URL}${image.image}`,
+                thumbnail: `${process.env.REACT_APP_API_URL}${image.image}`
             }))
         );
     }, [images]);
