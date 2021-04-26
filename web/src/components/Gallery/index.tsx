@@ -37,8 +37,8 @@ export function Gallery() {
     useEffect(() => {
         setGallery(
             images.map(image => ({
-                original:   `${process.env.REACT_APP_API_URL}${image.image}`,
-                thumbnail: `${process.env.REACT_APP_API_URL}${image.image}`
+                original:   `${process.env.REACT_APP_API_URL || "http://127.0.0.1:8000"}${image.image}`,
+                thumbnail: `${process.env.REACT_APP_API_URL || "http://127.0.0.1:8000"}${image.image}`
             }))
         );
     }, [images]);
