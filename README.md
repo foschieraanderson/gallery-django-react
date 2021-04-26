@@ -1,7 +1,7 @@
 # Galeria de Imagens
 
 Uma aplicação para visualizar suas imagens com multiplo apload de imagens
-e painel de administração. API feito em Django e SPA em React JS.
+e painel de administração.API feita com Django e SPA com React JS.
 
 <!-- TABLE OF CONTENTS -->
 <details open="open">
@@ -26,12 +26,10 @@ e painel de administração. API feito em Django e SPA em React JS.
 | API | Insomnia |
 |----------------------|-------------------------------|
 |![API](assets/api.png)|![Insonia](assets/insomnia.png)|
-|                      |                               |
 
 | Galeria | Uploads |
 |---------|---------|
 |![API](assets/galeria.png)|![Insonia](assets/upload.png)|
-|                          |                             | 
 
 
 ## Getting Started
@@ -56,12 +54,11 @@ e painel de administração. API feito em Django e SPA em React JS.
 
 ### Vamos começar subindo a API
 
-  - Entre da pasta do projeto
+  - Entre na pasta do projeto
     ```sh
-      $ cd gagallery-django-react
+      $ cd gallery-django-react
     ```
-  - Inicie seu ambiente virtual de preferência
-  - Eu estou usando **poetry**
+  - Inicie seu ambiente virtual de preferência eu vou usar **poetry**
     
     ```sh
     # Com o ambiente ativado vamos instalar as dependências
@@ -80,22 +77,12 @@ e painel de administração. API feito em Django e SPA em React JS.
     
     ```sh
 
-    # Editando o arquivo docker-compose.yml
+    # Editando o arquivo settings.py
 
       # Cole a sua secret_key aqui
       - SECRET_KEY=YOUR_SECRET_KEY
 
     ```
-
-  - Rodando a API
-    
-    ```sh
-    # Iniciando o servidor django
-
-     $ poetry run python manage.py runserver
-
-    ``` 
-  - Neste momento a api está rodando no seu navagador no endereço **http://127.0.0.1:8000**
 
   - Criando as tabelas no banco de dados
     
@@ -109,9 +96,19 @@ e painel de administração. API feito em Django e SPA em React JS.
      $ poetry run python manage.py migrate
 
     ```
+  - Rodando a API
+    
+    ```sh
+    # Iniciando o servidor django
+
+     $ poetry run python manage.py runserver
+
+    ``` 
+  - Neste momento a api está rodando no seu navagador no endereço **http://127.0.0.1:8000**
+  
 ### Agora podemos iniciar nossa aplicação
 
-  - Entre da pasta do projeto
+  - Entre na pasta do projeto
     ```sh
       $ cd web/
     ``` 
