@@ -126,7 +126,7 @@ e painel de administração.API feita com Django e SPA com React JS.
 * [Python](https://www.python.org)
 * [Django](https://www.djangoproject.com)
 * [Django Rest Framework](https://www.django-rest-framework.org)
-* [Postgres](https://www.postgresql.org)
+* [SQLite](https://www.sqlite.org/index.html)
 * [Swagger](https://swagger.io)
 * [Poetry](https://python-poetry.org)
 * [React](https://pt-br.reactjs.org)
