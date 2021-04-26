@@ -1,7 +1,7 @@
 [build]
 base = "web/"
 command = "yarn build"
-publish = "web/build/"
+publish = "./build/"
 
 [build.environment]
 REACT_APP_API_URL = ""
