@@ -1,17 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import App from './pages/Home/App';
-import Uploads from './pages/Uploads/index';
-import { Login } from './pages/Login';
+import App from './App';
+
+import { GlobalStyle } from "./styles/global";
+
 
 ReactDOM.render(
-  <BrowserRouter>
-      <Switch>
-          <Route path="/" exact={true} component={App} />
-          <Route path="/upload" component={Uploads} />
-          <Route path="/login" component={Login} />
-      </Switch>
-  </ BrowserRouter>,
+  <React.StrictMode>
+    <App />
+    <GlobalStyle />
+  </React.StrictMode>,
   document.getElementById('root')
 );

@@ -6,7 +6,6 @@ import FileList from "../../components/FileList";
 
 import { FileProvider } from "../../context/files";
  
-import { GlobalStyle } from "../../styles/global";
 import { Container, Content } from "./styles";
 
 const Uploads: React.FC = () => (
@@ -17,7 +16,6 @@ const Uploads: React.FC = () => (
         <Upload />
         <FileList />
       </Content>
-      <GlobalStyle />
     </Container>
   </FileProvider>
 );
