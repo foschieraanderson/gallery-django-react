@@ -104,6 +104,15 @@ e painel de administração.API feita com Django e SPA com React JS.
 
     ``` 
   - Neste momento a api está rodando no seu navagador no endereço **http://127.0.0.1:8000**
+
+  - Você vai querer acessar o painel administrativo que fica em **http://127.0.0.1:8000/admin** e para isso você vai precisar de um *usuário*
+    
+    ```sh
+    # Criando um usuário
+
+     $ poetry run python manage.py createsuperuser
+
+    ``` 
   
 ### Agora podemos iniciar nossa aplicação
 
