@@ -17,7 +17,6 @@ e painel de administração.API feita com Django e SPA com React JS.
     </li>
     <li><a href="#hammer_and_wrench-setup">Setup</a></li>
     <li><a href="#desktop_computer-technologies">Technologies</a></li>
-    <li><a href="#page_with_curl-license">License</a></li>
   </ul>
 </details>
 
