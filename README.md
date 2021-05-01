@@ -7,16 +7,17 @@ e painel de administração.API feita com Django e SPA com React JS.
 <details open="open">
   <summary><strong>TABLE OF CONTENTS</strong></summary>
   <ul>
-    <li><a href="#camera-screenshot">Screenshots</a></li>
+    <li><a href="#screenshot">Screenshots</a></li>
     <li>
-      <a href="#pushpin-getting-started">Getting Started</a>
+      <a href="#getting-started">Getting Started</a>
       <ul>
-        <li><a href="#key-requirements">Requirements</a></li>
-        <li><a href="#minidisc-installation">Installation</a></li>
+        <li><a href="#requirements">Requirements</a></li>
+        <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
-    <li><a href="#hammer_and_wrench-setup">Setup</a></li>
-    <li><a href="#desktop_computer-technologies">Technologies</a></li>
+    <li><a href="#setup">Setup</a></li>
+    <li><a href="#tests">Tests</li>
+    <li><a href="#technologies">Technologies</a></li>
   </ul>
 </details>
 
@@ -129,6 +130,13 @@ e painel de administração.API feita com Django e SPA com React JS.
       $ yarn start
     ``` 
   - Nesse momemnto a sua aplicação está rodando no endereço **http://127.0.0.1:3000**
+
+## Tests
+
+  - Vamos rodar os testes para garantir que está tudo conforme o esperado
+  ```sh
+    $ poetry run pytest
+  ```
 
 ## Technologies
 
