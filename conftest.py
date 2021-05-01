@@ -31,3 +31,10 @@ def user_admin(client, user_data_admin):
     user_admin = user_model.objects.create_superuser(**user_data_admin)
     client.force_login(user_admin)
     return user_admin
+
+@pytest.fixture
+def user_create(user_data):
+    """ Cria um usuário no banco de dados e retorna o objeto criado """
+    user_model = get_user_model()
+    user = user_model.objects.create_user(**user_data)
+    return user
