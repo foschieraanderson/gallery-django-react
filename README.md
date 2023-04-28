@@ -1,7 +1,8 @@
 # Galeria de Imagens
 
-Uma aplicação para visualizar suas imagens com multiplo apload de imagens
-e painel de administração.API feita com Django e SPA com React JS.
+Uma aplicação para visualizar suas imagens com múltiplo upload de imagens
+e painel de administração.
+API feita com Django e SPA com React JS.
 
 <!-- TABLE OF CONTENTS -->
 <details open="open">
@@ -12,7 +13,7 @@ e painel de administração.API feita com Django e SPA com React JS.
       <a href="#getting-started">Getting Started</a>
       <ul>
         <li><a href="#requirements">Requirements</a></li>
-        <li><a href="#installation">Installation</a></li>
+        <li><a href="#cloning">Cloning</a></li>
       </ul>
     </li>
     <li><a href="#setup">Setup</a></li>
@@ -36,12 +37,11 @@ e painel de administração.API feita com Django e SPA com React JS.
 
 ### Requirements
 
-- [Docker](https://www.docker.com/)
 - [Python](https://www.python.org/)
 - [Node](https://nodejs.org/en/)
 - [NPM](https://www.npmjs.com) ou [Yarn](https://yarnpkg.com)
 
-### Installation
+### Cloning
 - Clonando o repositório
 
   ```sh
@@ -58,7 +58,7 @@ e painel de administração.API feita com Django e SPA com React JS.
     ```sh
       $ cd gallery-django-react
     ```
-  - Inicie seu ambiente virtual de preferência eu vou usar **poetry**
+  - Inicie um ambiente virtual com sua ferramenta de preferência, eu vou usar **poetry**
     
     ```sh
     # Com o ambiente ativado vamos instalar as dependências
@@ -87,7 +87,7 @@ e painel de administração.API feita com Django e SPA com React JS.
   - Criando as tabelas no banco de dados
     
     ```sh
-    # Gravando as alterações
+    # Gravando as alterações nas migrations
 
      $ poetry run python manage.py makemigrations
 
@@ -104,9 +104,9 @@ e painel de administração.API feita com Django e SPA com React JS.
      $ poetry run python manage.py runserver
 
     ``` 
-  - Neste momento a api está rodando no seu navagador no endereço **http://127.0.0.1:8000**
+  - Neste momento você consegue acessar a api através do seu navegador no endereço **http://127.0.0.1:8000**
 
-  - Você vai querer acessar o painel administrativo que fica em **http://127.0.0.1:8000/admin** e para isso você vai precisar de um *usuário*
+  - Você vai querer acessar o painel administrativo na rota **http://127.0.0.1:8000/admin** e para isso você vai precisar de um *usuário*
     
     ```sh
     # Criando um usuário
@@ -115,7 +115,7 @@ e painel de administração.API feita com Django e SPA com React JS.
 
     ``` 
   
-### Agora podemos iniciar nossa aplicação
+### Agora podemos iniciar nosso frontend
 
   - Entre na pasta do projeto
     ```sh
